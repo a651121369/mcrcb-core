@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	WJW_BFDETAIL
+	ID ID
+	UNIT_NO UNIT_NO
+	AMOUNT AMOUNT
+	UNIT_NAME UNIT_NAME
+	BF_TIME BF_TIME
+	BF_ITEM 1-药品，2-医疗，3-其他
+	IN_BFQ_AMT IN_BFQ_AMT
+	IN_BFH_AMT IN_BFH_AMT
+	OUT_BFQ_AMT OUT_BFQ_AMT
+	OUT_BFH_AMT OUT_BFH_AMT
+	CONN_NO CONN_NO
+	DRUG_BF_AMT DRUG_BF_AMT
+	MEDC_BF_AMT MEDC_BF_AMT
+	NOTE1 NOTE1
+	NOTE2 NOTE2
+	-->
+	<sql id="_WjwBfdetail" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				ID,
+				UNIT_NO,
+				AMOUNT,
+				UNIT_NAME,
+				BF_TIME,
+				BF_ITEM,
+				IN_BFQ_AMT,
+				IN_BFH_AMT,
+				OUT_BFQ_AMT,
+				OUT_BFH_AMT,
+				CONN_NO,
+				DRUG_BF_AMT,
+				MEDC_BF_AMT,
+				NOTE1,
+				NOTE2
+		   from
+		       WJW_BFDETAIL        
+	]]>
+	</sql>
+</custom-sql>

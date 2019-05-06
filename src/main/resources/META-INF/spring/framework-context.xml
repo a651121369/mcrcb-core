@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				 <value>classpath:META-INF/res/resource-development.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 项目中配置spring 自动扫描类路径，生成spring bean -->
+	<context:component-scan base-package="com.unteck.tpc.framework.web"/>
+	<context:component-scan base-package="com.untech.mcrcb.web"/>
+	<context:component-scan base-package="com.untech.mcrcb.tran"/>
+	<context:component-scan base-package="com.untech.mcrcb.balance"/>
+	<!-- 项目中配置Hibernate自动扫描entity类路径 -->
+	<util:list id="hibernatePackagesToScan" list-class="java.util.ArrayList" value-type="java.lang.String">
+		<value>com.unteck.tpc.framework.web.model</value>
+		<value>com.untech.mcrcb.web.model</value>
+<!-- 		<value>com.unteck.fms.web.model</value> -->
+	</util:list>
+	
+<!-- 		 配置定时主机对账任务 -->
+	<bean name="tradingJob"  class="com.untech.mcrcb.balance.service.CronBalanceDispatchService"/>
+	<bean id="methodInvokingJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	      <property name="targetObject">
+	          <ref bean="tradingJob" />
+	      </property>
+	      <property name="targetMethod">
+	          <value>dispatch</value>
+	      </property>
+	      <property name="concurrent" value="false"/>
+<!-- 	        是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程   -->
+    </bean>
+<!--      配置触发器 每天21点整 -->
+    <bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+      <property name="jobDetail"><ref bean="methodInvokingJobDetail" /></property>
+  	  <property name="cronExpression"><value>30 50 21 * * ?</value></property>
+    </bean>
+    
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+    	<property name="triggers">
+    		<list>
+    		<ref local="cronTrigger" />
+    		</list>
+    	</property>
+    </bean>
+</beans>

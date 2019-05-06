@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	WJW_PAYMAIN
+	ID ID
+	UNIT_NAME UNIT_NAME
+	UNIT_NO UNIT_NO
+	PAY_TYPE PAY_TYPE
+	SQ_TIME SQ_TIME
+	STATUS 1-申请，2-初审，3-复审，4-作废，5-完成
+	DSP_USERNO DSP_USERNO
+	CS_USERNO CS_USERNO
+	FS_USERNO FS_USERNO
+	CS_TIME CS_TIME
+	FS_TIME FS_TIME
+	CONN_NO CONN_NO
+	DSP_USERNAME DSP_USERNAME
+	CS_USERNAME CS_USERNAME
+	FS_USERNAME FS_USERNAME
+	SQ_USERNO SQ_USERNO
+	SQ_USERNAME SQ_USERNAME
+	REMARK REMARK
+	NOTE1 NOTE1
+	NOTE2 NOTE2
+	-->
+	<sql id="_WjwPaymain" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				ID,
+				UNIT_NAME,
+				UNIT_NO,
+				PAY_TYPE,
+				SQ_TIME,
+				STATUS,
+				DSP_USERNO,
+				CS_USERNO,
+				FS_USERNO,
+				CS_TIME,
+				FS_TIME,
+				CONN_NO,
+				DSP_USERNAME,
+				CS_USERNAME,
+				FS_USERNAME,
+				SQ_USERNO,
+				SQ_USERNAME,
+				REMARK,
+				NOTE1,
+				NOTE2
+		   from
+		       WJW_PAYMAIN        
+	]]>
+	</sql>
+</custom-sql>

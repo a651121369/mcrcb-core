@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+*, html, body {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+address, caption, cite, code, dfn, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+caption, th {
+	text-align: left;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+abbr, acronym {
+	border: 0;
+}
+
+body {
+	color:#000;
+	font-size:16px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+input, button {
+	border:none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color:#ee520d;
+	text-decoration:underline;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clr {
+	padding:0;
+	margin:0;
+	clear: both;
+	content: "";
+	font-size: 0;
+	width:0;
+	height: 0;
+	line-height: 0;
+	overflow:hidden;
+	visibility: hidden;
+}
+
+.block {
+	display:block;
+}
+
+.container{
+	width:756px;
+	height:1086px;
+	margin:0 auto;
+}
+
+.top{
+	width:100%;
+	height:60px;
+	margin:50px 0 10px;
+	background:url(../images/header_bg.jpg) no-repeat;
+}
+
+.name{
+}
+
+.middle{
+	padding:15px;
+	margin-top:10px;
+	border:1px solid #000;
+}
+
+.middle h2{
+	text-align:center;
+	margin-bottom:30px;
+}
+
+.middle h2 b{
+	width:200px;
+	font-size:16px;
+	padding-bottom:10px;
+	display:inline-block;
+	border-bottom:1px solid #000;
+}
+
+.middle h3{
+	font-size:14px;
+	margin-bottom:15px;
+}
+
+.middle p{
+	text-indent:28px;
+	line-height:35px;
+}
+
+.input-txt{
+	width:200px;
+	border-bottom:1px solid #000;
+}
+
+.bottom{
+	text-align:right;
+	margin-top:10px;
+}
+
+.p01{
+	text-align:right;
+}
+
+
+
+
+/*.title{
+	color:#000;
+	font-size:24px;
+	text-align:center;
+	margin:40px 0 15px;
+}
+
+.tab-r{
+	float:right;
+	font-size:14px;
+	padding:5px 0;
+}
+
+.table{
+	clear:both;
+	width:100%;
+	background:#000;
+	border-collapse:separate;
+	border-spacing:1px;
+}
+
+.table td{
+	padding:8px;
+	background:#fff;
+}
+
+.table p{
+	line-height:22px;
+}
+
+.table p.p03{
+	text-indent:28px;
+	line-height:40px;
+}
+
+.divrow-1{
+	margin-bottom:100px;
+}
+
+.divrow-2{
+	padding-bottom:40px;
+}
+
+.divrow-1 p{
+	line-height:40px;
+}
+
+.p01{
+	text-indent:28px;
+}
+
+.p02{
+	width:360px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

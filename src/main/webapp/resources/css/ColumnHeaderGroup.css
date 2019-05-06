@@ -1,0 +1,10 @@
+/*!
+3	 * Ext JS Library 3.4.0
+4	 * Copyright(c) 2006-2011 Sencha Inc.
+5	 * licensing@sencha.com
+6	 * http://www.sencha.com/license
+7	 */
+td.ux-grid-hd-group-cell {
+    background: url(<%=WebResource("ExtAspNet.res.theme.default.grid.grid3-hrow.gif")%>) repeat-x bottom;
+};
+

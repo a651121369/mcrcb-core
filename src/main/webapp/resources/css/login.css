@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* 
+	@基础平台
+*/
+
+body {margin: 0px; background:#2ba039 url(../images/core/login/loginbg.jpg) center top no-repeat; }
+#msg{color:red;font-size:14px;}
+.login_box{width:363px; margin:0 auto; font-size:16px; padding-right:300px;}
+.dltitle{padding:60px 0 20px; text-align:left; width:680px; margin:0 auto;}
+.login{width:487px; background:url(../images/core/login/tmbg.png) repeat; padding:0 0 40px; display:table; font-family:"微软雅黑"; font-weight:lighter;}
+
+.login_2{width:360px; height:310px; background:url(../images/core/login/loginboxbg.png) no-repeat;}
+.login_2 p{padding:10px 0 0 28px; width:100%; margin:0; float:left; font-family:"微软雅黑"; font-weight:lighter;}
+.login_title{padding:10px 0; font-size:24px; display:table; color:#194c01; width:320px; margin:0 auto; font-family: "微软雅黑";}
+.login_title img{ float:left; margin:10px 10px 0 20px;}
+.login_title span{float:left; margin-top:18px;}
+.login img{float:left;}
+.textbox_yhm{ background:url(../images/core/login/yhm.png) no-repeat; border:0; width:260px; height:33px; line-height:33px; float:left; padding:0 40px 0 6px;}
+.textbox_mm{ background:url(../images/core/login/mm.png) no-repeat; border:0; width:260px; height:33px; line-height:33px; float:left; padding:0 40px 0 6px;}
+.login_btn{width:100px; height:33px; background:url(../images/core/login/login_btn.jpg) no-repeat;  border:0; cursor:pointer; margin:10px 0 0 30px;}
+.login_btn_cz{width:100px; height:33px; background:url(../images/core/login/cz.jpg) no-repeat; border:0; cursor:pointer; margin:10px 0 0 20px;}
+.copy{width:363px; margin:0 auto; background: url(../images/core/login/copybg.jpg) top center no-repeat; padding:15px 0 0; text-align:center; color:#fff; font-size:13px;}

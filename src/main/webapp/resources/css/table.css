@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+*, html, body {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+address, caption, cite, code, dfn, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+caption, th {
+	text-align: left;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+abbr, acronym {
+	border: 0;
+}
+
+body {
+	color:#000;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+input, button {
+	border:none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color:#ee520d;
+	text-decoration:underline;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clr {
+	padding:0;
+	margin:0;
+	clear: both;
+	content: "";
+	font-size: 0;
+	width:0;
+	height: 0;
+	line-height: 0;
+	overflow:hidden;
+	visibility: hidden;
+}
+
+.block {
+	display:block;
+}
+
+.container{
+	width:1086px;
+	height:756px;
+	margin:0 auto;
+}
+
+.detail{
+	width:1086px;
+	margin:20px 0 10px;
+}
+
+.detail p{
+	line-height:30px;
+}
+
+.detail span{
+	margin-right:15px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.det-l{
+	width:700px;
+}
+
+.det-r{
+	
+}
+
+
+.table{
+	
+	clear:both;
+	width:100%;
+	background:#000;
+	border-collapse:separate;
+	border-spacing:1px;
+}
+
+.table td,.table th{
+	text-align:center;
+	font-size:12px;
+	padding:8px;
+	background:#fff;
+}
+
+.table th{
+	
+}
+
+.table p{
+	line-height:26px;
+}
+
+.s01{
+	width:150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

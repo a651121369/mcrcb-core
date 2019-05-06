@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	WJW_ACCCHANGE
+	ID ID
+	UNIT_NO UNIT_NO
+	UNIT_NAME UNIT_NAME
+	ACC_NO ACC_NO
+	ACC_NAME ACC_NAME
+	DF_ACCNO DF_ACCNO
+	DF_ACCNAME DF_ACCNAME
+	AMOUNT AMOUNT
+	DRUG_AMT DRUG_AMT
+	MEDC_AMT MEDC_AMT
+	TRAN_AMT TRAN_AMT
+	TRAN_TIME TRAN_TIME
+	IN_OR_OUT 1-收入，2-支出
+	OTHER_AMT OTHER_AMT
+	NOTE1 NOTE1
+	NOTE2 NOTE2
+	-->
+	<sql id="_WjwAccchange" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				ID,
+				UNIT_NO,
+				UNIT_NAME,
+				ACC_NO,
+				ACC_NAME,
+				DF_ACCNO,
+				DF_ACCNAME,
+				AMOUNT,
+				DRUG_AMT,
+				MEDC_AMT,
+				TRAN_AMT,
+				TRAN_TIME,
+				IN_OR_OUT,
+				OTHER_AMT,
+				NOTE1,
+				NOTE2
+		   from
+		       WJW_ACCCHANGE        
+	]]>
+	</sql>
+</custom-sql>

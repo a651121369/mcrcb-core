@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	WJW_ACCOUNT
+	ID ID
+	ACC_NO ACC_NO
+	CUST_NAME CUST_NAME
+	ACC_TYPE 1对公，2对私
+	UNIT_NO UNIT_NO
+	UNIT_NAME UNIT_NAME
+	AMOUNT AMOUNT
+	ACC_NUM ACC_NUM
+	ACC_STATUS 1-正常，2-注销
+	ACC_PARENT ACC_PARENT
+	CREATE_TIME CREATE_TIME
+	CREATE_USER CREATE_USER
+	UPDATE_TIME UPDATE_TIME
+	UPDATE_USER UPDATE_USER
+	LEVEL LEVEL
+	RATE RATE
+	BANK_UNIT BANK_UNIT
+	BANK_NAME BANK_NAME
+	BANK_AMOUNT BANK_AMOUNT
+	UNK_COME UNK_COME
+	INT_COME INT_COME
+	CURRENCY 156-人名币
+	ACC_FLD 1-真实帐户，2-虚拟账户
+	ACC_PRO 1-活期，2-定期，3-协议
+	INT_FLAG 1-计息，2-不计息
+	INT_TYPE 1-按月计息，2-按季度计息，3-按年计息
+	IN_OR_OUT 1-收入，2-支出
+	DRUG_AMT DRUG_AMT
+	MEDICAL_AMT MEDICAL_AMT
+	OTHER_AMT OTHER_AMT
+	NOTE1 NOTE1
+	NOTE2 NOTE2
+	-->
+	<sql id="_WjwAccount" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				ID,
+				ACC_NO,
+				CUST_NAME,
+				ACC_TYPE,
+				UNIT_NO,
+				UNIT_NAME,
+				ACCOUNT_SYS_CODE,
+				AMOUNT,
+				ACC_NUM,
+				ACC_STATUS,
+				ACC_PARENT,
+				CREATE_TIME,
+				CREATE_USER,
+				UPDATE_TIME,
+				UPDATE_USER,
+				LEVEL,
+				RATE,
+				BANK_UNIT,
+				BANK_NAME,
+				BANK_AMOUNT,
+				UNK_COME,
+				INT_COME,
+				CURRENCY,
+				ACC_FLD,
+				ACC_PRO,
+				INT_FLAG,
+				INT_TYPE,
+				IN_OR_OUT,
+				DRUG_AMT,
+				MEDICAL_AMT,
+				OTHER_AMT,
+				NOTE1,
+				NOTE2
+		   from
+		       WJW_ACCOUNT        
+	]]>
+	</sql>
+</custom-sql>

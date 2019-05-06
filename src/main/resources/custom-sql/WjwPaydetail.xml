@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	PAY_WAY 1-现金，2-转账
+	CURRENCY 人民币  156
+	STATUS 1-申请，2-初审，3-复审，4-作废，5-完成
+	ITEM 1-医疗 ，2-药品，3-其他
+	-->
+	<sql id="Wjw_Paydetail_Mx" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				b.*
+		   from WJW_PAYMAIN a
+			left join WJW_PAYDETAIL b on a.CONN_NO=b.CONN_NO 
+		       where 1=1 and b.STATUS=5
+		   <#if userCode??>
+		 		and a.CS_USERNO='${userCode}'
+		   </#if>
+	       <#if startTime??>
+	   			and b.PAY_TIME between '${startTime?default(firstDayOfCurrentMonth)}' and '${endTime?default(currentDate)}'
+		   </#if> 
+		   <#if unitName??>
+		 		and a.UNIT_NAME like '%${unitName}%'
+		   </#if>
+	]]>
+	</sql>
+	<sql id="Wjw_Paydetail_Lodop" style="countPager" tempateType="freeMarker">
+		<![CDATA[
+		 select
+		 <#if count>
+		 	count(1)
+		 <#else>
+		 	*
+		 </#if>
+			from
+		       WJW_PAYDETAIL
+		       where 1=1 
+		   <#if detailId??>
+		   		and ID=${detailId}
+		   </#if>
+		   <#if connNo??>
+		   		and CONN_NO='${connNo}'
+		   </#if>
+		   <#if startTime??>
+		   		and PAY_TIME between '${startTime?default(firstDayOfCurrentMonth)}' and '${endTime?default(currentDate)}'
+		   </#if> 
+		   <#if unitName??>
+		 		and UNIT_NAME like '%${unitName}%'
+		   </#if>
+	]]>
+	</sql>
+	<sql id="Wjw_PayMain_All" style="countPager" tempateType="freeMarker">
+		<![CDATA[
+		select
+		<#if count>
+			count(1)
+		<#else>
+			* 
+		</#if>
+			from WJW_PAYMAIN 
+		 	where SQ_TIME between '${startTime?default(firstDayOfCurrentMonth)}' and '${endTime?default(currentDate)}' 
+		 	<#if unitName??>
+		 		and UNIT_NAME like '%${unitName}%'
+		 	</#if>
+		 	<#if parentId??>
+		 		and UNIT_NO='${orgId}'
+		 	<#else>
+		 		
+		 	</#if>
+		 	 ORDER BY SQ_TIME DESC
+	]]>
+	</sql>
+</custom-sql>

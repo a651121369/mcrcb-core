@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	WJW_CHECKER
+	ID ID
+	USER_ID USER_ID
+	UNIT_ID UNIT_ID
+	NOTE1 NOTE1
+	NOTE2 NOTE2
+	-->
+	<sql id="_WjwChecker" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				ID,
+				USER_ID,
+				UNIT_ID,
+				NOTE1,
+				NOTE2
+		   from
+		       WJW_CHECKER        
+	]]>
+	</sql>
+</custom-sql>

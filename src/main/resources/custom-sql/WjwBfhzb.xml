@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<!-- 
+	@author chenyong
+	WJW_BFHZB
+	ID ID
+	UNIT_NO UNIT_NO
+	UNIT_NAME UNIT_NAME
+	BF_AMT BF_AMT
+	BF_DRUG_AMT BF_DRUG_AMT
+	BF_MEDC_AMT BF_MEDC_AMT
+	BF_TIM BF_TIM
+	OPER_NO OPER_NO
+	OPER_TIME OPER_TIME
+	DETAIL DETAIL
+	CONN_NO CONN_NO
+	REMARK REMARK
+	NOTE1 NOTE1
+	NOTE2 NOTE2
+	-->
+	<sql id="_WjwBfhzb" tempateType="freeMarker">
+		<![CDATA[
+		 select
+				ID,
+				UNIT_NO,
+				UNIT_NAME,
+				BF_AMT,
+				BF_DRUG_AMT,
+				BF_MEDC_AMT,
+				BF_TIM,
+				OPER_NO,
+				OPER_TIME,
+				DETAIL,
+				CONN_NO,
+				REMARK,
+				NOTE1,
+				NOTE2
+		   from
+		       WJW_BFHZB        
+	]]>
+	</sql>
+</custom-sql>

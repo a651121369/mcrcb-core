@@ -1,0 +1,21 @@
+/*
+ * 姝ゆ牱寮忕敤鍦ㄥ伐绋嬮」鐩爲涓� prjClassCls:椤圭洰绫诲埆 ;  prjCls:椤圭洰; conCls:鎵垮缓鍗曚綅
+ */
+.prjClassCls {
+    background-image:url(../images/icons/fms/computer_add.png) !important;
+}
+.prjCls {
+    background-image:url(../images/icons/fms/flag_blue.png) !important;
+}
+.conCls {
+    background-image:url(../images/icons/fms/house.png) !important;
+}
+.status_onlineCls {
+    background-image:url(../images/icons/fms/status_online.png) !important;
+}
+.user_redCls {
+    background-image:url(../images/icons/fms/user_red.png) !important;
+}
+.forbiddenZH {
+    ime-mode:disabled;
+}
